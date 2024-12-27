@@ -25,7 +25,7 @@ THE SOFTWARE.
 <j:jelly xmlns:j="jelly:core" xmlns:f="/lib/form">
   <f:entry title="${%Projects to build}" field="childProjects">
 	<f:textbox value="${instance.childProjectsValue}"
-               checkUrl="'descriptorByName/DownstreamTrigger/check?value='+encodeURIComponent(this.value)"/>
+               checkUrl="descriptorByName/DownstreamTrigger/check" checkDependsOn=""/>
   </f:entry>
   <f:entry title="${%Build result is}" description="${%Trigger downstream job if build result meets condition}">
      <select name="descriptor.strategy">
